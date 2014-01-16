@@ -3,9 +3,9 @@ require 'nokogiri'
 require 'active_support/core_ext/hash/conversions'
 
 desc "deletes old content and scrapes new content from Munchery"
-task :scrape do
+task :scrape => :environment do
 
-  Meal.delete_all("updated_at < ?", 12.hours.ago)
+  Meal.delete_all(["updated_at < ?", 12.hours.ago])
 
   base_url = "https://munchery.com/menus/#/0"
 
@@ -19,7 +19,7 @@ task :scrape do
     meal = Meal.find_or_initialize_by(name: entree['name'])
 
     price = BigDecimal('%d.%.2d' % [entree['price']['dollars'], entree['price']['cents']])
-    meal.update(name: entree['name'], description: entree['description'], url: ("#{baseurl}/#{entree['url']}/info"),
+    meal.update(name: entree['name'], description: entree['description'], url: ("#{base_url}/#{entree['url']}/info"),
                 price: price, remaining: entree['qty_remaining'])
   end
 
