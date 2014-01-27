@@ -19,8 +19,8 @@ development:
   encoding: unicode
   database: muncheried_development
   pool: 5
-  username: cl-stalker
-  password: a
+  username: jade
+  password:
 
   # Connect on a TCP socket. Omitted by default since the client uses a
   # domain socket that doesn't need configuration. Windows does not have
@@ -48,13 +48,13 @@ test:
   encoding: unicode
   database: muncheried_test
   pool: 5
-  username: cl-stalker
-  password: a
+  username: jade
+  password:
 
 production:
   adapter: postgresql
   encoding: unicode
   database: muncheried_production
   pool: 5
-  username: muncheried
+  username: jade
   password:
