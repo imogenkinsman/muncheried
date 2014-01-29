@@ -23,4 +23,16 @@ task :scrape => :environment do
         url: ("#{base_url}/#{entree['url']}/info"), price: price, remaining: entree['qty_remaining'])
   end
 
+  #TODO: DRY THIS!
+  sides = json['menu']['sections'].find { |section| section["name"] == "Sides" }["items"]
+  flash_sides = entrees.select { |entree| entree["price_mod"] == "Flash Sale" }
+
+  flash_sides.each do |side|
+    meal = Meal.find_or_initialize_by(name: side['name'])
+
+    price = BigDecimal('%d.%.2d' % [side['price']['dollars'], side['price']['cents']])
+    meal.update(name: side['name'], description: side['description'], category: "side",
+                url: ("#{base_url}/#{side['url']}/info"), price: price, remaining: side['qty_remaining'])
+  end
+
 end
