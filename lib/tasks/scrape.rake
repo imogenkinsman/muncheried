@@ -19,8 +19,8 @@ task :scrape => :environment do
     meal = Meal.find_or_initialize_by(name: entree['name'])
 
     price = BigDecimal('%d.%.2d' % [entree['price']['dollars'], entree['price']['cents']])
-    meal.update(name: entree['name'], description: entree['description'], url: ("#{base_url}/#{entree['url']}/info"),
-                price: price, remaining: entree['qty_remaining'])
+    meal.update(name: entree['name'], description: entree['description'], category: "entree",
+        url: ("#{base_url}/#{entree['url']}/info"), price: price, remaining: entree['qty_remaining'])
   end
 
 end

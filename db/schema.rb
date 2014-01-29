@@ -19,6 +19,7 @@ ActiveRecord::Schema.define(version: 20140116030354) do
   create_table "meals", force: true do |t|
     t.string   "name"
     t.text     "description"
+    t.string   "category"
     t.string   "url"
     t.decimal  "price",       precision: 5, scale: 2
     t.integer  "remaining"
