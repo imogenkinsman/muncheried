@@ -1,14 +1,23 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Muncheried</title>
+  <title>MunchAlerts -- Get notified of Munchery sales</title>
+  <meta name="description" content="Check current Munchery flash sales and be notified of new ones by email!">
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= stylesheet_link_tag    "application", "http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-
-<%= yield %>
-
+<div id="container">
+  <header>
+    <h1>
+      <%= link_to root_url do %>
+        Munch<strong>Alert</strong>
+      <% end %>
+    </h1>
+  </header>
+  <%= yield %>
+</div>
 </body>
 </html>
