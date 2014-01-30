@@ -27,6 +27,10 @@ header {
       font-weight: 600;
       font-size: 48px;
       color: $lightgrey;
+
+      &:hover strong {
+        color: #F2EF99;
+      }
     }
 
     strong {
