@@ -1,1 +1,9 @@
-<span><%= meal.name %></span>
+<div class="meal">
+  <% if meal.category == "Entree" %>
+    <%= image_tag "plates.svg" %>
+  <% else %>
+    <%= image_tag "plate.svg" %>
+  <% end %>
+  <%= link_to meal.name , meal.url, { class: "name" } %>
+  <span>$<%= meal.price %></span>
+</div>

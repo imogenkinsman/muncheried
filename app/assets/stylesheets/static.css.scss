@@ -14,7 +14,13 @@ body {
     width: auto;
     padding: 10px 10px 0 10px;
   }
+
+  a {
+    text-decoration: none;
+  }
 }
+
+/* header */
 
 header {
 
@@ -23,10 +29,9 @@ header {
 
   h1 {
     a {
-      text-decoration: none;
       font-weight: 600;
       font-size: 48px;
-      color: $lightgrey;
+      color: $verylightgrey;
 
       &:hover strong {
         color: #F2EF99;
@@ -37,7 +42,16 @@ header {
       color: $softblue;
     }
   }
+}
 
+/* footer */
+
+footer {
+  margin-top: 45px;
+  padding-top: 5px;
+  border-top: 1px solid #eaeaea;
+  color: #999;
+  clear: both;
 }
 
 #main {
@@ -46,7 +60,37 @@ header {
 
   h2 {
     text-align: center;
-    font-size: 30px;
+    font-size: 40px;
   }
 
+}
+
+/* sales */
+
+#meals {
+  margin: 50px auto 0;
+  width: 800px;
+}
+
+.meal {
+  float: left;
+  padding: 10px;
+  width: 240px;
+  background: $verylightgrey; // um do something less ugly than this
+
+  img {
+    display: block;
+    margin: auto;
+    width: 120px;
+    height: 100px;
+  }
+
+  span, a {
+    display: block;
+    text-align: center;
+  }
+
+  .name {
+    padding-top: 10px;
+  }
 }
