@@ -34,7 +34,7 @@ header {
       color: $verylightgrey;
 
       &:hover strong {
-        color: #F2EF99;
+        color: $canary;
       }
     }
 
@@ -88,6 +88,10 @@ footer {
   span, a {
     display: block;
     text-align: center;
+  }
+
+  a {
+    color: $softblue;
   }
 
   .name {

@@ -21,6 +21,9 @@ gem 'mandrill-api', '~> 1.0.49'
 # for web scraping
 gem 'nokogiri', '~> 1.6.1'
 
+# for bootstrappin's
+gem 'bootstrap-sass', '~> 3.1.0'
+
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 
