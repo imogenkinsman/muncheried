@@ -50,8 +50,12 @@ footer {
   margin-top: 45px;
   padding-top: 5px;
   border-top: 1px solid #eaeaea;
-  color: #999;
-  clear: both;
+  clear: both; // this shouldn't need to be cleared - fix the float div above
+
+  p {
+    float: right;
+  }
+
 }
 
 #main {
