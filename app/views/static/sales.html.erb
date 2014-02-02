@@ -2,7 +2,6 @@
 
 <div id="meals">
   <% @meals.each_with_index do |meal, i| %>
-    <% side = i.odd? ? 'left' : 'right' %>
-    <%= render 'meal', meal: meal, side: side %>
+    <%= render 'meal', meal: meal, side: @sides[i] %>
   <% end %>
 </div>
