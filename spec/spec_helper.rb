@@ -6,6 +6,7 @@ require 'rspec/autorun'
 require 'simplecov'
 
 SimpleCov.start
+Coveralls.wear!
 
 # Requires supporting ruby files with custom matchers and macros, etc,
 # in spec/support/ and its subdirectories.
