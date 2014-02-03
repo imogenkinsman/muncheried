@@ -48,8 +48,8 @@ test:
   encoding: unicode
   database: muncheried_test
   pool: 5
-  username: jade
-  password:
+#  username: jade
+#  password:
 
 production:
   adapter: postgresql
