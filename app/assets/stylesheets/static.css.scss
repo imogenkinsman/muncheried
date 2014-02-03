@@ -134,8 +134,9 @@ footer {
 /* about, faq */
 
 div[id*='content-'] {
-  margin-top: 60px;
-  padding: 0 50px;
+  margin: 60px 40px;
+  padding: 10px 10px 5px 10px;
+  border: 1px dashed $black;
 
   p {
     padding: 10px 0;
@@ -144,4 +145,9 @@ div[id*='content-'] {
   strong {
     font-weight: 600;
   }
+}
+
+#email {
+  text-align: center;
+  margin-top: 60px;
 }
