@@ -9,5 +9,6 @@ script:
   - RAILS_ENV=test rake db:seed --trace
   - bundle exec rspec spec/
 before_script:
-  - psql -c 'create database muncheried_test' -U postgres
-  - psql -c "create user jade with password 'jade';" -U postgres
+  - psql -c "create database muncheried_test" -U postgres
+  - psql -c "create user jade with password 'jade';" -U postgres'
+  - psql -c "alter database muncheried_test to 'jade'" -U postgres
