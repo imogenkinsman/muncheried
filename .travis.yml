@@ -1,14 +1,3 @@
 language: ruby
 rvm:
   - 2.1.0
-env:
-  - DB=postgres
-script:
-  - RAILS_ENV=test bundle exec rake db:migrate --trace
-  - bundle exec rake db:test:prepare
-  - RAILS_ENV=test rake db:seed --trace
-  - bundle exec rspec spec/
-before_script:
-  - psql -c "create database muncheried_test" -U postgres
-  - psql -c "create user jade with password 'jade';" -U postgres'
-  - psql -c "alter database muncheried_test to 'jade'" -U postgres
