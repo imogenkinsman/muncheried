@@ -53,6 +53,18 @@ header {
       color: $softblue;
     }
   }
+
+}
+
+#manage-url {
+  position: absolute;
+  right: 15px;
+  top: 25px;
+  font-size: 18px;
+  color: $softblue;
+  &:hover {
+    color: $canary;
+  }
 }
 
 /* footer */
@@ -119,13 +131,17 @@ footer {
   }
 }
 
-/* about */
+/* about, faq */
 
-#about-content {
+div[id*='content-'] {
   margin-top: 60px;
   padding: 0 50px;
-}
 
-.about {
-  padding: 10px 0;
+  p {
+    padding: 10px 0;
+  }
+
+  strong {
+    font-weight: 600;
+  }
 }
