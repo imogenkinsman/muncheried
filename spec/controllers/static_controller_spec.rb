@@ -5,5 +5,12 @@ describe StaticController, :type => :controller do
       get :sales
       expect(assigns(:meals)).to eq(meals)
     end
+
+    it "assigns meal orientations" do
+      create_list(:meal, 2)
+      get :sales
+      expect(assigns(:sides).first).to eq 'left'
+      expect(assigns(:sides).last).to eq 'right'
+    end
   end
 end
