@@ -2,6 +2,6 @@
 
 <div id="meals">
   <% @meals.each_with_index do |meal, i| %>
-    <%= render 'meal', meal: meal, side: @sides[i] %>
+    <%= render 'meal', meal: meal, side: @image_side[i] %>
   <% end %>
 </div>
