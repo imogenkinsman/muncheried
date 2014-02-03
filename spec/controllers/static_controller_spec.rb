@@ -3,7 +3,7 @@ describe StaticController, :type => :controller do
     it "populates an array of meals" do
       meals = create_list(:meal, 3)
       get :sales
-      assigns(:meals).should eq(meals)
+      expect(assigns(:meals)).to eq(meals)
     end
   end
 end

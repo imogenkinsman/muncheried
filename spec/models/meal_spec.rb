@@ -1,6 +1,7 @@
 describe Meal do
   it "can be instantiated" do
-    Meal.new.should be_an_instance_of(Meal)
+    meal = Meal.new
+    expect(meal).to be_an_instance_of(Meal)
   end
 
 end
