@@ -4,4 +4,6 @@ Muncheried::Application.routes.draw do
 
   get '/about', to: 'static#about'
 
+  get '/signup', to: 'users#signup'
+
 end
