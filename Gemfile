@@ -46,4 +46,5 @@ group :test do
   gem 'simplecov', :require => false
   gem 'rspec-rails'
   gem 'rake'
+  gem 'factory_girl_rails', '~> 4.0'
 end
