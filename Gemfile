@@ -30,10 +30,8 @@ group :doc do
 end
 
 gem 'compass-rails', '~> 1.1.3'
-
-group :assets do
-  gem 'sass-rails', '~> 4.0.0'
-end
+gem 'sass-rails', '~> 4.0.0'
+gem 'bootstrap-sass', '~> 3.1.0'
 
 group :test do
   gem 'coveralls', require: false
