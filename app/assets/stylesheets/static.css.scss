@@ -96,14 +96,14 @@ footer {
 
 #meals {
   margin: 50px auto 0;
-  width: 800px;
+  width: 700px;
 }
 
 .meal {
   float: left;
   margin: 10px;
   padding-bottom: 10px;
-  width: 240px;
+  width: 100%;
 //  background: $verylightgrey; // um do something less ugly than this
   @include background-image(linear-gradient(white, #aaaaaa));
 //  background-color: #1e1d1d;
@@ -111,9 +111,15 @@ footer {
 
   img {
     display: block;
-    margin: auto;
-    width: 120px;
-    height: 100px;
+    width: 100px;
+    height: 80px;
+
+    &.right {
+      float: right;
+    }
+    &.left {
+      float: left;
+    }
   }
 
   span, a {
