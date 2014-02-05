@@ -1,4 +1,5 @@
 describe Meal do
+
   it 'can be instantiated' do
     meal = Meal.new
     expect(meal).to be_an_instance_of(Meal)
@@ -26,8 +27,11 @@ describe Meal do
     expect(build(:meal, price: nil)).not_to be_valid
   end
 
-  it 'is invalid if price is greater than 15' do
+  it 'is invalid if price is negative or greater than 15' do
     expect(build(:meal, price: 15.23)).not_to be_valid
+    expect(build(:meal, price: -1)).not_to be_valid
+    expect(build(:meal, price: 0)).not_to be_valid
     expect(build(:meal, price: 14)).to be_valid
   end
+
 end

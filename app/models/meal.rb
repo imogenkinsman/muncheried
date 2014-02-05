@@ -6,6 +6,6 @@ class Meal < ActiveRecord::Base
             presence: true, inclusion: { in: %w(Entree Side) }
 
   validates :price,
-            presence: true, numericality: { less_than: 15 }
+            presence: true, numericality: { greater_than: 0, less_than: 15 }
 
 end
