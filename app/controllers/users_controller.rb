@@ -7,9 +7,10 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
     if @user.save
-      flash[:success] = 'Success!'
+      redirect_to root_path, notice: 'Success!'
+    else
+      redirect_to root_path, notice: 'Failure!'
     end
-    redirect_to root
   end
 
   private
