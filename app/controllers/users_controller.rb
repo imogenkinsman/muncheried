@@ -9,7 +9,7 @@ class UsersController < ApplicationController
     if @user.save
       redirect_to root_path, flash: { success: 'Success!' }
     else
-      redirect_to root_path, flash: { error: 'Error!' }
+      render new_user_path
     end
   end
 
