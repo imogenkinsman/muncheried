@@ -1,1 +1,7 @@
-<div id='flash'><%= flash[:notice] %></div>
+<div id='flash-messages'>
+  <ul>
+    <% flash.each do |name, message| %>
+      <%= content_tag(:li, message, class: "flash-#{name}") %>
+    <% end %>
+  </ul>
+</div>

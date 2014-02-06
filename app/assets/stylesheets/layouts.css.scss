@@ -1,0 +1,26 @@
+@import 'colors';
+@import 'compass/css3';
+
+#flash-messages {
+
+//  display: inline-block;
+
+  ul {
+    text-align: center;
+  }
+
+  li {
+
+    padding: 5px;
+    margin-top: 20px;
+//    width: 350px;
+
+    &.flash-error {
+      background-color: $americanrose;
+    }
+
+    &.flash-success {
+      background-color: $yellowgreen;
+    }
+  }
+}
