@@ -1,0 +1,29 @@
+@import 'colors';
+
+#registration-errors {
+
+  margin-bottom: 20px;
+
+  ul {
+    text-align: center;
+  }
+
+  li {
+    padding: 5px;
+    margin-top: 20px;
+    background-color: $americanrose
+  }
+
+}
+
+#new_user {
+
+  div {
+    display: inline-block;
+  }
+
+  label, input {
+    margin-right: 5px;
+  }
+
+}

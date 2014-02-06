@@ -1,9 +1,11 @@
 <% if @user.errors.any? %>
-  <ul id='registration-errors'>
-    <% @user.errors.full_messages.each do |message| %>
-      <%= content_tag(:li, message, class: 'registration-error') %>
-    <% end %>
-  </ul>
+  <div id='registration-errors'>
+    <ul>
+      <% @user.errors.full_messages.each do |message| %>
+        <%= content_tag(:li, message, class: 'registration-error') %>
+      <% end %>
+    </ul>
+  </div>
 <% end %>
 
 <div>
