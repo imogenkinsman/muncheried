@@ -21,6 +21,7 @@ describe Meal do
     expect(build(:meal, category: 'Alcohol')).not_to be_valid
     expect(build(:meal, category: 'Entree')).to be_valid
     expect(build(:meal, category: 'Side')).to be_valid
+    expect(build(:meal, category: 'Drink')).to be_valid
   end
 
   it 'is invalid without a price' do

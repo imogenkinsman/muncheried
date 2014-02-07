@@ -3,7 +3,7 @@ class Meal < ActiveRecord::Base
             presence: true
 
   validates :category,
-            presence: true, inclusion: { in: %w(Entree Side) }
+            presence: true, inclusion: { in: %w(Entree Side Drink) }
 
   validates :price,
             presence: true, numericality: { greater_than: 0, less_than: 15 }

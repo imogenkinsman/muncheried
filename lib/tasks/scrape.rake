@@ -16,7 +16,7 @@ namespace :scrape do
     content = doc.at_xpath("//script[@class='menu-page-data']")
     json = JSON.parse(content.inner_html.strip)
 
-    %w(Entree Side).each do |type|
+    %w(Entree Side Drink).each do |type|
       scrape(json, type)
     end
 
@@ -28,13 +28,13 @@ namespace :scrape do
 
     new_records = false
 
-    flash_items.each do |entree|
-      meal = Meal.find_or_initialize_by(name: entree['name'])
+    flash_items.each do |item|
+      meal = Meal.find_or_initialize_by(name: item['name'])
       new_records = true if meal.new_record?
-      price = BigDecimal('%d.%.2d' % [entree['price']['dollars'], entree['price']['cents']])
-      meal.update(name: entree['name'], description: entree['description'], category: category,
-                  url: ("https://munchery.com/menus/#/0/#{entree['url']}/info"), price: price,
-                  remaining: entree['qty_remaining'])
+      price = BigDecimal('%d.%.2d' % [item['price']['dollars'], item['price']['cents']])
+      meal.update(name: item['name'], description: item['description'], category: category,
+                  url: ("https://munchery.com/menus/#/0/#{item['url']}/info"), price: price,
+                  remaining: item['qty_remaining'])
     end
 
     if new_records
