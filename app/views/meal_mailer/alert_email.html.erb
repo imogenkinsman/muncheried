@@ -1,0 +1,8 @@
+Today's flash sales:
+<br> <br>
+<% @meals.each do |meal| %>
+<%= meal.name %> - $<%= meal.price %>
+<%= meal.description %>
+<%= meal.url %>
+<br><br>
+<% end %>
