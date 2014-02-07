@@ -19,7 +19,7 @@ development:
   encoding: unicode
   database: muncheried_development
   pool: 5
-  username: jade
+#  username: jade
   password:
 
   # Connect on a TCP socket. Omitted by default since the client uses a
@@ -56,5 +56,4 @@ production:
   encoding: unicode
   database: muncheried_production
   pool: 5
-  username: jade
   password:

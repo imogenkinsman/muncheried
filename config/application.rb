@@ -15,5 +15,6 @@ module Muncheried
   class Application < Rails::Application
 
     I18n.enforce_available_locales = true
+    config.assets.initialize_on_precompile = false
   end
 end

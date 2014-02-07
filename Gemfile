@@ -1,4 +1,5 @@
 source 'https://rubygems.org'
+ruby '2.1.0'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.2'
@@ -39,4 +40,8 @@ group :test do
   gem 'rspec-rails'
   gem 'rake'
   gem 'factory_girl_rails', '~> 4.0'
+end
+
+group :production do
+  gem 'rails_12factor' # for heroku
 end
