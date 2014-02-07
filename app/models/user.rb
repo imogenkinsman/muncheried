@@ -5,7 +5,7 @@ class User < ActiveRecord::Base
             presence: true, uniqueness: true, format: { with: VALID_EMAIL_REGEX }
 
   validates :secret_key,
-            presence: true, uniqueness: true
+            presence: true, uniqueness: true, length: { is: 22 }
 
   validates :subscribed,
             presence: true
