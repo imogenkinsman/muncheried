@@ -16,4 +16,3 @@
 /coverage/*
 
 # Ignore config settings to prevent committing smtp key to public repo
-/config/environments/*
