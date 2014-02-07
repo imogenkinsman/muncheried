@@ -1,6 +1,8 @@
 @import 'colors';
 @import 'compass/css3';
 
+/* flash messages */
+
 #flash-messages {
 
   ul {
@@ -19,4 +21,97 @@
       background-color: $yellowgreen;
     }
   }
+}
+
+/* body layout styling */
+
+html {
+  height: 100%;
+}
+
+body {
+  width: 100%;
+  margin: auto;
+  height: 100%;
+
+  font-family: 'Source Sans Pro', sans-serif;
+
+  @media screen and (max-width: 976px) {
+    width: auto;
+    padding: 10px 10px 0 10px;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  p {
+    font-size: 18px;
+  }
+}
+
+#container {
+  position: relative;
+  min-height: 100%;
+}
+
+/* header */
+
+header {
+
+  background-color: $midnightblue;
+  padding: 10px 10px 10px 35px;
+
+  h1 {
+
+    a {
+      font-weight: 600;
+      font-size: 48px;
+      color: $verylightgrey;
+
+      &:hover strong {
+        color: $canary;
+      }
+    }
+
+    strong {
+      color: $softblue;
+    }
+  }
+
+  #manage-url {
+    position: absolute;
+    right: 15px;
+    top: 25px;
+    font-size: 18px;
+    color: $softblue;
+    &:hover {
+      color: $canary;
+    }
+  }
+}
+
+/* footer */
+
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 8px 0;
+  border-top: 1px solid $lightgrey;
+
+  p {
+    float: right;
+  }
+
+}
+
+#main {
+  margin-top: 30px;
+
+  h2 {
+    text-align: center;
+    font-size: 40px;
+  }
+
 }
