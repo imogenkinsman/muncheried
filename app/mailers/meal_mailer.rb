@@ -1,5 +1,5 @@
 class MealMailer < ActionMailer::Base
-  default from: "from@example.com"
+  default from: "noreply@munchalert.com"
 
   def alert_email(user)
     @user = user

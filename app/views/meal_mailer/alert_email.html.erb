@@ -3,8 +3,7 @@ Today's flash sales:
 <% @meals.each do |meal| %>
 <%= meal.name %> - $<%= meal.price %>
 <%= meal.description %>
-<%= link_to meal.url %>
+<%= link_to 'Munchery link', meal.url %>
 <br><br>
 <% end %>
 <br><br><br><br>
-<%= link_to 'Click to Unsubscribe', @user, :method => :delete %>
