@@ -6,5 +6,6 @@ class MealMailer < ActionMailer::Base
     @meals = Meal.where('created_at > ?', 1.day.ago)
     date = Date.current.to_formatted_s(:long_ordinal)
     mail(to: @user.email, subject: "Munchery alert for #{date}")
+    user.update(emailed_at: DateTime.now)
   end
 end

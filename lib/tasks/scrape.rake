@@ -16,17 +16,22 @@ namespace :scrape do
     content = doc.at_xpath("//script[@class='menu-page-data']")
     json = JSON.parse(content.inner_html.strip)
 
+    current_meals = Meal.all.size
+
     %w(Entree Side Drink).each do |type|
       scrape(json, type)
     end
 
+    if Meal.all.size > current_meals
+      User.where('emailed_at < ?', 1.day.ago).each do |user|
+        MealMailer.alert_email(user)
+      end
+    end
   end
 
   def scrape(json, category)
     items = json['menu']['sections'].find { |section| section["name"] == category.pluralize }["items"]
     flash_items = items.select { |entree| entree["price_mod"] == "Flash Sale" }
-
-    new_records = false
 
     flash_items.each do |item|
       meal = Meal.find_or_initialize_by(name: item['name'])
@@ -35,12 +40,6 @@ namespace :scrape do
       meal.update(name: item['name'], description: item['description'], category: category,
                   url: ("https://munchery.com/menus/#/0/#{item['url']}/info"), price: price,
                   remaining: item['qty_remaining'])
-    end
-
-    if new_records
-      User.where('emailed_at < ?', 1.day.ago).each do |user|
-        MealMailer.alert_email(user)
-      end
     end
   end
 
