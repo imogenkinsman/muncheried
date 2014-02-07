@@ -6,6 +6,7 @@ class UsersController < ApplicationController
 
   def create
     @user = User.new(user_params)
+    @user.secret_key = SecureRandom.urlsafe_base64
     if @user.save
       redirect_to root_path, flash: { success: 'Email added!' }
     else

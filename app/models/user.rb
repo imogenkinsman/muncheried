@@ -3,4 +3,10 @@ class User < ActiveRecord::Base
   
   validates :email,
             presence: true, uniqueness: true, format: { with: VALID_EMAIL_REGEX }
+
+  validates :secret_key,
+            presence: true, uniqueness: true
+
+  validates :subscribed,
+            presence: true
 end
