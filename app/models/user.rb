@@ -11,5 +11,5 @@ class User < ActiveRecord::Base
             presence: true
 
   validates :emailed_at,
-            presence: true, default: 2.days.ago
+            presence: true
 end
