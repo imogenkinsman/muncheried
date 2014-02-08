@@ -35,4 +35,15 @@ describe Meal do
     expect(build(:meal, price: 14)).to be_valid
   end
 
+  describe 'class method available' do
+
+    it 'returns the currently available meals' do
+      create(:meal, name: 'Chicken')
+      create(:meal, name: 'Salad', created_at: 3.days.ago)
+      create(:meal, name: 'Pasta', remaining: 0)
+      expect(Meal.available.map(&:name)).to eq ['Chicken']
+    end
+
+  end
+
 end

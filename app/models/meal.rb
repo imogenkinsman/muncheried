@@ -10,7 +10,7 @@ class Meal < ActiveRecord::Base
 
   # returns all meals still available to order
   def self.available
-    self.where('created_at > ?', 1.day.ago).where('remaining != ', 0)
+    self.where('created_at > ?', 1.day.ago).where.not(remaining: 0)
   end
 
 end
