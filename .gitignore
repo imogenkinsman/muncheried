@@ -15,4 +15,5 @@
 *.idea
 /coverage/*
 
-# Ignore config settings to prevent committing smtp key to public repo
+# Ignore environmental variables
+.env
