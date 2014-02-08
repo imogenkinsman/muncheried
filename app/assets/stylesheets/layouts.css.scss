@@ -91,6 +91,18 @@ header {
   }
 }
 
+#pasta-banner {
+  height: 270px;
+  width: 100%;
+  @include background(image-url('pasta.png'));
+  border-bottom: 25px solid $midnightblue;
+}
+
+//.separator {
+//  height: 10px;
+//  background-color: $midnightblue;
+//}
+
 /* footer */
 
 footer {
