@@ -9,7 +9,7 @@ class Meal < ActiveRecord::Base
             presence: true, numericality: { greater_than: 0, less_than: 15 }
 
   # returns all meals still available to order
-  def available
+  def self.available
     self.where('created_at > ?', 1.day.ago).where('remaining != ', 0)
   end
 
