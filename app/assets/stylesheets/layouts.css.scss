@@ -1,4 +1,4 @@
-@import 'colors';
+@import 'libraries/colors';
 @import 'compass/css3';
 
 /* flash messages */
@@ -96,12 +96,13 @@ header {
   width: 100%;
   @include background(image-url('pasta.png'));
   border-bottom: 25px solid $midnightblue;
+  position: relative;
 }
 
-//.separator {
-//  height: 10px;
-//  background-color: $midnightblue;
-//}
+.box {
+  position: absolute;
+  width: 200px;
+}
 
 /* footer */
 
