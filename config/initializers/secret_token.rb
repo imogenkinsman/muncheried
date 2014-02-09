@@ -9,4 +9,9 @@
 
 # Make sure your secret_key_base is kept private
 # if you're sharing your code publicly.
-Muncheried::Application.config.secret_key_base = ENV['SECRET_TOKEN']
+
+if Rails.env.development? || Rails.env.test?
+  Muncheried::Application.config.secret_key_base = ('x' * 30)
+else
+  Muncheried::Application.config.secret_key_base = ENV['SECRET_TOKEN']
+end
