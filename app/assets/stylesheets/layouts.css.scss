@@ -42,7 +42,7 @@ body {
     padding: 10px 10px 0 10px;
   }
 
-  a {
+  a, a:hover {
     text-decoration: none;
   }
 
@@ -70,8 +70,13 @@ header {
       font-size: 48px;
       color: $verylightgrey;
 
-      &:hover strong {
-        color: $canary;
+      &:hover {
+
+        color: $white;
+
+        strong {
+          color: $canary;
+        }
       }
     }
 
