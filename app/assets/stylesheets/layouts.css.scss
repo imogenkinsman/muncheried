@@ -113,11 +113,12 @@ header {
   top: 30px;
   width: 320px;
   height: 200px;
-  background-color: rgba(0,0,0,0.65)
-}
+  background-color: rgba(0,0,0,0.65);
 
-#new_user label {
-  color: $white;
+  label {
+    color: $white;
+    padding-right: 3px;
+  }
 }
 
 /* footer */

@@ -7,11 +7,11 @@
 </header>
 <div id="pasta-banner">
   <div class="box well">
-    <form id="new_user">
-      <label for="email">Email</label>
-      <input type="text">
-      <button>Submit</button>
-    </form>
+    <%= form_tag '/users' do %>
+      <%= label_tag 'email', 'Email' %>
+      <%= email_field_tag 'email' %>
+      <%= submit_tag 'Submit' %>
+    <% end %>
   </div>
 </div>
 <div class='separator'></div>
