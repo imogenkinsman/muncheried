@@ -7,7 +7,7 @@
 </header>
 <div id="pasta-banner">
   <div class="box well">
-    <%= form_tag '/users' do %>
+    <%= form_tag '/users', remote: true do %>
       <%= label_tag 'email', 'Email' %>
       <%= email_field_tag 'email' %>
       <%= submit_tag 'Submit' %>
