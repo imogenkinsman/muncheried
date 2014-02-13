@@ -7,6 +7,13 @@
   <%= link_to 'Sign Up  ', new_user_path, id: "manage-url" %>
 </header>
 <div id='pasta-banner'>
-  <div class="box well"></div>
+  <div class="box well">
+    <%= form_for(@user) do |f| %>
+
+    <%= f.label :email %>
+    <%= f.text_field :email %>
+    <%= f.submit 'Submit' %>
+    <% end %>
+  </div>
 </div>
 <div class='separator'></div>

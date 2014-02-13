@@ -10,6 +10,4 @@ class User < ActiveRecord::Base
   validates :subscribed,
             presence: true
 
-  validates :emailed_at,
-            presence: true
 end
