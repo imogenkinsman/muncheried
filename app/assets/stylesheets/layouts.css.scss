@@ -58,9 +58,13 @@ body {
 
 /* header */
 
+#section-top {
+  background-color: $midnightblue;
+  padding-bottom: 25px;
+}
+
 header {
 
-  background-color: $midnightblue;
   padding: 10px 10px 10px 35px;
 
   h1 {
@@ -86,24 +90,12 @@ header {
       color: $softblue;
     }
   }
-
-  #manage-url {
-    position: absolute;
-    right: 30px;
-    top: 25px;
-    font-size: 18px;
-    color: $softblue;
-    &:hover {
-      color: $canary;
-    }
-  }
 }
 
 #pasta-banner {
   height: 270px;
   width: 100%;
   @include background(image-url('pasta.png'));
-  border-bottom: 25px solid $midnightblue;
   position: relative;
 }
 

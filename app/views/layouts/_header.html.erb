@@ -1,17 +1,18 @@
-<header>
-  <h1>
-    <%= link_to root_url do %>
-      Munch<strong>Alerts</strong>
-    <% end %>
-  </h1>
-</header>
-<div id="pasta-banner">
-  <div class="box well">
-    <%= form_tag '/users', remote: true, id: 'email-form' do %>
-      <%= label_tag 'email', 'Email' %>
-      <%= email_field_tag 'email' %>
-      <%= submit_tag 'Submit' %>
-    <% end %>
+<div id="section-top">
+  <header>
+    <h1>
+      <%= link_to root_url do %>
+        Munch<strong>Alerts</strong>
+      <% end %>
+    </h1>
+  </header>
+  <div id="pasta-banner">
+    <div class="box well">
+      <%= form_tag '/users', remote: true, id: 'email-form' do %>
+        <%= label_tag 'email', 'Email' %>
+        <%= email_field_tag 'email' %>
+        <%= submit_tag 'Submit' %>
+      <% end %>
+    </div>
   </div>
 </div>
-<div class='separator'></div>
