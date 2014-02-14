@@ -5,9 +5,15 @@ class UsersController < ApplicationController
   end
 
   def create
+
     @user = User.new(user_params)
     @user.secret_key = SecureRandom.urlsafe_base64 # is there a cleaner way to do this?
-    @user.save
+    if @user.save
+      head :created
+    else
+      head :conflict
+    end
+
   end
 
   private
