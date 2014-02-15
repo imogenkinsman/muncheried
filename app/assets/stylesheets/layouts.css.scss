@@ -97,6 +97,8 @@ header {
   width: 100%;
   @include background(image-url('pasta.png'));
   position: relative;
+  border-top: 1px solid $darkgrey;
+  border-bottom: 2px solid $darkgrey;
 }
 
 .box {
