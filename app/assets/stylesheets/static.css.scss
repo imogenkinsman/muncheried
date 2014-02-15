@@ -4,7 +4,7 @@
 /* about, faq */
 
 div[id*='content-'] {
-  margin: 60px auto;
+  margin: 60px auto 0;
   width: 1000px;
   padding: 10px 10px 5px 10px;
   border: 1px dashed $black;
@@ -20,5 +20,5 @@ div[id*='content-'] {
 
 #faq-email {
   text-align: center;
-  margin-top: 60px;
+  margin-top: 30px;
 }
