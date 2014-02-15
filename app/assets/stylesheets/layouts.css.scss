@@ -103,11 +103,34 @@ header {
 
 .box {
   position: absolute;
-  right: 200px;
-  top: 30px;
-  width: 320px;
-  height: 200px;
+  right: 400px;
+  top: 40px;
+  width: 310px;
+  height: 120px;
   background-color: rgba(0,0,0,0.65);
+
+  form {
+    padding-top: 15px;
+    display: inline-block;
+  }
+
+  #box-top {
+    float: right;
+    padding-right: 30px;
+  }
+
+  #sign-up {
+    color: $white;
+    font-size: 22px;
+    padding-right: 20px;
+    vertical-align: bottom;
+  }
+
+  a {
+    background-color: $darkgrey;
+    color: $white;
+    border-color: $lightgrey;
+  }
 
   label {
     color: $white;

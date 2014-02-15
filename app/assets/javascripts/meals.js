@@ -9,4 +9,5 @@ $('#email-form').on('ajax:error', function(event, xhr, status) {
   console.log('failure');
 });
 
+$('#help-popover').popover();
 });

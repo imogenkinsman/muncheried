@@ -8,6 +8,11 @@
   </header>
   <div id="pasta-banner">
     <div class="box well">
+      <div id="box-top">
+        <span id="sign-up">Sign Up</span>
+        <a id="help-popover" class="btn" role="button" data-container="body" data-toggle="popover" data-placement="right"
+        data-content="Have sale alerts sent to your email" data-trigger="click">?</a>
+      </div>
       <%= form_tag '/users', remote: true, id: 'email-form' do %>
         <%= label_tag 'email', 'Email' %>
         <%= email_field_tag 'email' %>
