@@ -7,6 +7,6 @@ Muncheried::Application.routes.draw do
   get '/faq',   to: 'static#faq'
 
   # user routes
-  resources :users, only: [:new, :create]
+  resources :users, only: :create
 
 end
