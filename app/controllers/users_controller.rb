@@ -14,9 +14,11 @@ class UsersController < ApplicationController
 
   def unsubscribe
     user = User.find(params[:id])
-    if user.secret_key = params[:secret_key]
+    if user.secret_key = params[:key]
       user.update_attributes(subscribed: false)
     end
+
+    redirect_to root_path
   end
 
   private

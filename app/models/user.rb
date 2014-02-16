@@ -7,7 +7,7 @@ class User < ActiveRecord::Base
   validates :secret_key,
             presence: true, uniqueness: true, length: { is: 22 }
 
-  validates :subscribed,
-            presence: true
+  validates_inclusion_of :subscribed,
+                         in: [true, false]
 
 end
