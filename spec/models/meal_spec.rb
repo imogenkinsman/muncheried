@@ -35,7 +35,7 @@ describe Meal do
     expect(build(:meal, price: 14)).to be_valid
   end
 
-  describe 'class method available' do
+  describe '#available' do
 
     it 'returns the currently available meals' do
       create(:meal, name: 'Chicken')

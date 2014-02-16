@@ -25,4 +25,16 @@ describe User do
     expect(build(:user, email: 'unique@test.com')).to be_invalid
   end
 
+  describe '#get_recipients' do
+
+    it 'returns users who should be emailed' do
+      create(:user, email: 'a@test.com', emailed_at: 2.days.ago)
+      create(:user, email: 'b@test.com', emailed_at: 1.hour.ago)
+      create(:user, email: 'c@thest.com', subscribed: false)
+      recipients = User.get_recipients
+      expect(recipients.map(&:email)).to eq ['a@test.com']
+    end
+
+  end
+
 end

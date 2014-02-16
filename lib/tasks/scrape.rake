@@ -23,7 +23,7 @@ namespace :scrape do
     end
 
     if Meal.all.size > current_meals
-      User.where('emailed_at < ?', 1.day.ago).each do |user|
+      User.get_recipients.each do |user|
         MealMailer.alert_email(user).deliver
       end
     end
