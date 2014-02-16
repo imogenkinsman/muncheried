@@ -7,3 +7,4 @@ Today's flash sales:
 <br><br>
 <% end %>
 <br><br><br><br>
+<%= link_to "unsubscribe", unsubscribe_url(id: @user.id, key: @user.secret_key) %>

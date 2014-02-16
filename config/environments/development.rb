@@ -29,4 +29,5 @@ Muncheried::Application.configure do
 
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = { address: "localhost", port: 1025 }
+  config.action_mailer.default_url_options = { host: 'http://0.0.0.0', port: '3000' }
 end
