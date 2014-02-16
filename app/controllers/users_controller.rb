@@ -1,7 +1,6 @@
 class UsersController < ApplicationController
 
   def create
-
     @user = User.new(user_params)
     @user.secret_key = SecureRandom.urlsafe_base64 # is there a cleaner way to do this?
     if @user.save
@@ -18,7 +17,7 @@ class UsersController < ApplicationController
       user.update_attributes(subscribed: false)
     end
 
-    redirect_to root_path
+    redirect_to root_path, flash: { success: "Successfully unsubscribed #{user.email} from MunchAlerts" }
   end
 
   private

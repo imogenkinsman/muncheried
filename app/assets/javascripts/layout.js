@@ -1,0 +1,5 @@
+$(function() {
+
+  $('#flash-messages').slideDown();
+
+});

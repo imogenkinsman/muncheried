@@ -1,7 +1,7 @@
-<div id='registration-messages'>
+<div id='flash-messages'>
   <ul>
     <% flash.each do |name, message| %>
-      <%= content_tag(:li, message, class: "registration-#{name}") %>
+      <%= content_tag(:li, message, class: name ) %>
     <% end %>
   </ul>
 </div>
