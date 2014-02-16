@@ -12,6 +12,13 @@ class UsersController < ApplicationController
 
   end
 
+  def unsubscribe
+    user = User.find(params[:id])
+    if user.secret_key = params[:secret_key]
+      user.update_attributes(subscribed: false)
+    end
+  end
+
   private
 
     def user_params

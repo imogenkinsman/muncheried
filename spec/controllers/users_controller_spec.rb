@@ -1,5 +1,4 @@
 describe UsersController do
 
 
-
 end

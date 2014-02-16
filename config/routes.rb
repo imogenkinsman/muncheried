@@ -8,5 +8,6 @@ Muncheried::Application.routes.draw do
 
   # user routes
   resources :users, only: :create
+  get '/users/:id/unsubscribe/:key', to: 'users#unsubscribe', as: 'unsubscribe'
 
 end

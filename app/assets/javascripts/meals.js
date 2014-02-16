@@ -1,4 +1,4 @@
-$(document).ready(function() {
+$(function() {
 
 
 $('#email-form').on('ajax:success', function(data, status, xhr) {
@@ -10,4 +10,5 @@ $('#email-form').on('ajax:error', function(event, xhr, status) {
 });
 
 $('#help-popover').popover();
+
 });

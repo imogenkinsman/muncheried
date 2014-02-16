@@ -58,12 +58,12 @@ body {
 
 /* header */
 
-#section-top {
+header {
   background-color: $midnightblue;
   padding-bottom: 25px;
 }
 
-header {
+nav {
 
   padding: 10px 10px 10px 35px;
 
@@ -115,8 +115,8 @@ header {
   }
 
   #box-top {
-    float: right;
-    padding-right: 30px;
+    margin: 0 auto;
+    width: 150px;
   }
 
   #sign-up {
