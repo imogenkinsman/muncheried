@@ -14,11 +14,12 @@ class UsersController < ApplicationController
 
   def unsubscribe
     user = User.find(params[:id])
-    if user.secret_key = params[:key]
+    if user.secret_key == params[:key]
       user.update_attributes(subscribed: false)
+      flash[:success] = "Successfully unsubscribed #{user.email} from MunchAlerts"
     end
 
-    redirect_to root_path, flash: { success: "Successfully unsubscribed #{user.email} from MunchAlerts" }
+    redirect_to root_path
   end
 
   private
