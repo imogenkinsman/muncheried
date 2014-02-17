@@ -34,6 +34,7 @@ describe UsersController do
 
       expect(@user.subscribed).to be_false
       expect(response).to redirect_to root_path
+      expect(flash[:success]).to eq 'Successfully unsubscribed test@aol.com from MunchAlerts'
     end
 
     it "does not unsubscribe a user if secret key doesn't match" do
@@ -44,7 +45,6 @@ describe UsersController do
 
       expect(@user.subscribed).to be_true
     end
-
 
   end
 
