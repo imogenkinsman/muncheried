@@ -2,7 +2,7 @@ class UsersController < ApplicationController
 
   def create
     @user = User.new(user_params)
-    @user.secret_key = SecureRandom.urlsafe_base64 # is there a cleaner way to do this?
+    @user.secret_key = SecureRandom.urlsafe_base64
     if @user.save
       head :created
     else

@@ -13,7 +13,7 @@ class User < ActiveRecord::Base
   # returns all users that are "safe" to email:
   # those who (1) haven't been emailed today and (2) are still active
   def self.get_recipients
-    User.where('emailed_at < ?', 1.day.ago).where(subscribed: true)
+    User.where('emailed_at < ? AND subscribed = true', 11.hours.ago)
   end
 
 end
