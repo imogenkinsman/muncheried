@@ -4,9 +4,9 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     @user.secret_key = SecureRandom.urlsafe_base64
     if @user.save
-      response = { success: "Successfully added #{@user.email}"}
+      response = { type: 'success', message: "Successfully added #{@user.email}"}
     else
-      response = { error: "Unable to add #{@user.email}"}
+      response = { type: 'error', message: "Unable to add #{@user.email}"}
     end
 
     render json: response

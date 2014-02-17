@@ -2,11 +2,12 @@ $(function() {
 
 
 $('#email-form').on('ajax:success', function(data, status, xhr) {
-  console.log('success');
+  $('#flash-messages').remove();
+  $('nav').after("<p>Success</p>");
 });
 
 $('#email-form').on('ajax:error', function(event, xhr, status) {
-  console.log('failure');
+  // idk handle this better
 });
 
 $('#help-popover').popover();
