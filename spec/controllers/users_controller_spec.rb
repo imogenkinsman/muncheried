@@ -6,10 +6,11 @@ describe UsersController do
       expect{ post :create, email: 'a@userscontroller.com' }.to change{ User.count }.from(0).to(1)
     end
 
-    it 'gives header-only responses' do
-      post :create, email: 'c@userscontroller.com'
-      expect(response.code).to eq '201'
-      expect(response.body.strip.empty?).to be_true
+    it 'gives a json response' do
+      email = 'c@userscontroller.com'
+      post :create, email: email
+      expect(response).to be_success
+      expect(response.body).to eq({ success: "Successfully added #{email}"}.to_json)
     end
 
     it 'creates a secret key for the user' do
@@ -34,7 +35,7 @@ describe UsersController do
 
       expect(@user.subscribed).to be_false
       expect(response).to redirect_to root_path
-      expect(flash[:success]).to eq 'Successfully unsubscribed test@aol.com from MunchAlerts'
+      expect(flash[:success]).to eq "Successfully unsubscribed #{@user.email} from MunchAlerts"
     end
 
     it "does not unsubscribe a user if secret key doesn't match" do

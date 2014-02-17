@@ -4,11 +4,12 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     @user.secret_key = SecureRandom.urlsafe_base64
     if @user.save
-      head :created
+      response = { success: "Successfully added #{@user.email}"}
     else
-      head :conflict
+      response = { error: "Unable to add #{@user.email}"}
     end
 
+    render json: response
   end
 
   def unsubscribe
