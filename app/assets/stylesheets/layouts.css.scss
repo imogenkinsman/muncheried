@@ -97,6 +97,7 @@ nav {
   height: 270px;
   width: 100%;
   @include background(image-url('pasta.png'));
+  background-size: cover;
   @include transition-property(height);
   @include transition-duration(1s);
   position: relative;
