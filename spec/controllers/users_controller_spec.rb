@@ -10,7 +10,7 @@ describe UsersController do
       email = 'c@userscontroller.com'
       post :create, email: email
       expect(response).to be_success
-      expect(response.body).to eq({ success: "Successfully added #{email}"}.to_json)
+      expect(response.body).to eq({ type: 'success', message: "Successfully added #{email}"}.to_json)
     end
 
     it 'creates a secret key for the user' do
