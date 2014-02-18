@@ -66,30 +66,25 @@ header {
 
 nav {
 
-  padding: 10px 10px 10px 35px;
+  padding-left: 35px;
 
-  h1 {
+  a {
+    font-weight: 600;
+    font-size: 40px;
+    color: $lightgrey;
 
-    margin: 0;
+    &:hover {
 
-    a {
-      font-weight: 600;
-      font-size: 48px;
-      color: $lightgrey;
+      color: $white;
 
-      &:hover {
-
-        color: $white;
-
-        strong {
-          color: $canary;
-        }
+      strong {
+        color: $canary;
       }
     }
+  }
 
-    strong {
-      color: $softblue;
-    }
+  strong {
+    color: $softblue;
   }
 }
 
@@ -102,7 +97,7 @@ nav {
   @include transition-duration(1s);
   position: relative;
   border-top: 1px solid $grey;
-  border-bottom: 2px solid $grey;
+  border-bottom: 1px solid $grey;
 
   @media (max-width: 979px) {
     height: 300px;
