@@ -75,7 +75,7 @@ nav {
     a {
       font-weight: 600;
       font-size: 48px;
-      color: $verylightgrey;
+      color: $lightgrey;
 
       &:hover {
 
@@ -101,8 +101,8 @@ nav {
   @include transition-property(height);
   @include transition-duration(1s);
   position: relative;
-  border-top: 1px solid $darkgrey;
-  border-bottom: 2px solid $darkgrey;
+  border-top: 1px solid $grey;
+  border-bottom: 2px solid $grey;
 
   @media (max-width: 979px) {
     height: 300px;
@@ -142,7 +142,7 @@ nav {
   a {
     background-color: $darkgrey;
     color: $white;
-    border-color: $lightgrey;
+    border-color: $grey;
   }
 
   label {
@@ -158,7 +158,7 @@ footer {
   bottom: 0;
   width: 100%;
   padding: 8px 0;
-  border-top: 1px solid $lightgrey;
+  border-top: 1px solid $grey;
 
   p {
     float: right;
