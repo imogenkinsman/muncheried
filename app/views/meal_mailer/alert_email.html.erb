@@ -1,13 +1,10 @@
-We're found the first flash <%= @meals > 1 ? 'sales' : 'sale' %> of the day:
+We've found the first flash <%= @meals.size > 1 ? 'sales' : 'sale' %> of the day:
 <br> <br>
 <% @meals.each do |meal| %>
-<%= meal.name %> - $<%= meal.price %>
-<%= meal.description %>
-<%= link_to 'Munchery link', meal.url %>
-<br><br>
+<%= meal.name %> - $<%= meal.price %> - <%= link_to 'link', meal.url %>
 <% end %>
 <br><br><br>
 As always, flash sale items can sell out rapidly, and more sale items may pop up later in the day. A periodically-updated
 list of flash sales is available on <%= link_to "our website", root_url %>.
-<br><br><br><br>
-<%= link_to "One Click Unsubscribe", unsubscribe_url(id: @user.id, key: @user.secret_key) %>
+<br><br><br>
+<%= link_to "Unsubscribe", unsubscribe_url(id: @user.id, key: @user.secret_key) %>
