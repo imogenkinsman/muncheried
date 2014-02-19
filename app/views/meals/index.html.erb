@@ -1,7 +1,9 @@
 <h2>Today's Flash Sales</h2>
 
 <div id="meals">
-  <% @meals.each_with_index do |meal, i| %>
-    <%= render 'meal', meal: meal, side: @image_side[i] %>
-  <% end %>
+  <ul>
+    <% @meals.each do |meal| %>
+      <li><%= link_to meal.name, meal.url %></li>
+    <% end %>
+  </ul>
 </div>
