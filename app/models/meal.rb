@@ -11,7 +11,7 @@ class Meal < ActiveRecord::Base
   # returns all meals still available to order
   # TODO: check for remaining
   def self.available
-    self.where('created_at > ?', 10.hours.ago)
+    self.where('created_at > ? AND (remaining IS NULL OR remaining > 0)', 10.hours.ago)
   end
 
 end

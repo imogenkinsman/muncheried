@@ -41,7 +41,8 @@ describe Meal do
       create(:meal, name: 'Chicken')
       create(:meal, name: 'Salad', created_at: 3.days.ago)
       create(:meal, name: 'Pasta', remaining: 0)
-      expect(Meal.available.map(&:name)).to eq ['Chicken']
+      create(:meal, name: 'Beef', remaining: nil)
+      expect(Meal.available.map(&:name)).to eq ['Chicken', 'Beef']
     end
 
   end
