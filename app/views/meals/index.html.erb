@@ -3,7 +3,7 @@
 <div id="meals">
   <ul>
     <% @meals.each do |meal| %>
-      <li><%= link_to meal.name, meal.url %></li>
+      <li><%= link_to meal.name, meal.url, target: '_blank' %></li>
     <% end %>
   </ul>
 </div>

@@ -13,7 +13,9 @@
   <%= render "layouts/header" %>
 
   <div id="main" role="main">
-    <%= yield %>
+    <div id="main-content">
+      <%= yield %>
+    </div>
   </div>
   <%= render "layouts/footer" %>
 </div>
