@@ -31,8 +31,7 @@ describe User do
       create(:user, email: 'a@test.com', emailed_at: 2.days.ago)
       create(:user, email: 'b@test.com', emailed_at: 1.hour.ago)
       create(:user, email: 'c@thest.com', subscribed: false)
-      recipients = User.get_recipients
-      expect(recipients.map(&:email)).to eq ['a@test.com']
+      expect(User.get_recipients.map(&:email)).to eq ['a@test.com']
     end
 
   end

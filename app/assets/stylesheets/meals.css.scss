@@ -6,6 +6,7 @@
 #meals {
   margin: 40px auto 0;
   text-align: center;
+  min-width: 500px;
 
   ul {
     list-style: none;
@@ -13,7 +14,6 @@
   }
 
   li {
-    display: inline;
     font-size: 24px;
   }
 }
