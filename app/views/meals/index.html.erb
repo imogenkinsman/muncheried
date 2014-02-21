@@ -1,9 +1,13 @@
 <h2>Today's Flash Sales</h2>
 
 <div id="meals">
+  <% if @meals.size > 0 %>
   <ul>
     <% @meals.each do |meal| %>
       <li><%= link_to meal.name, meal.url, target: '_blank' %></li>
     <% end %>
   </ul>
+  <% else %>
+    <p>None Yet!</p>
+  <% end %>
 </div>
