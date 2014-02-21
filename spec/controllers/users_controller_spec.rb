@@ -2,7 +2,7 @@ describe UsersController do
 
   describe 'post #create' do
 
-    let(:email) { 'test@userscontroller.com'}
+    let(:email) { 'test@userscontroller.com' }
 
     it 'creates a new user' do
       expect{ post :create, email: email }.to change{ User.count }.from(0).to(1)

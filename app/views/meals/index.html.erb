@@ -4,7 +4,7 @@
   <% if @meals.size > 0 %>
   <ul>
     <% @meals.each do |meal| %>
-      <li><%= link_to meal.name, meal.url, target: '_blank' %></li>
+      <li><%= link_to meal, meal.url, target: '_blank' %></li>
     <% end %>
   </ul>
   <% else %>

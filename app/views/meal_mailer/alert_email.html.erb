@@ -1,7 +1,7 @@
 We've found the first flash <%= @meals.size > 1 ? 'sales' : 'sale' %> of the day:
 <br> <br>
 <% @meals.each do |meal| %>
-<%= meal.name %> - $<%= meal.price %> - <%= link_to 'link', meal.url %>
+<%= meal %> - $<%= meal.price %> - <%= link_to 'link', meal.url %>
 <% end %>
 <br><br><br>
 As always, flash sale items can sell out rapidly, and more sale items may pop up later in the day. A periodically-updated
