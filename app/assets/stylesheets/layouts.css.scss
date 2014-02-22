@@ -171,7 +171,8 @@ nav {
 /* footer */
 
 footer {
-
+  position: absolute;
+  bottom: 0;
   width: 100%;
   padding: 8px 0 1px;
   border-top: 2px solid $darkgrey;
@@ -182,13 +183,9 @@ footer {
     padding-right: 30px;
   }
 
-  @media (min-height: 900px) {
-    position: absolute;
-    bottom: 0;
-  }
-
   @media (max-height: 899px) {
     margin-top: 20px;
+    position: static;
   }
 
 }
