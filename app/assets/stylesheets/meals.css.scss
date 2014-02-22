@@ -6,7 +6,6 @@
 #meals {
   margin: 40px auto 0;
   text-align: center;
-  min-width: 500px;
 
   ul {
     list-style: none;
@@ -16,4 +15,9 @@
   li {
     font-size: 24px;
   }
+
+  @media (min-width: 767px) {
+    min-width: 500px;
+  }
+
 }
