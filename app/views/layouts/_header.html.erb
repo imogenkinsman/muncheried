@@ -7,14 +7,13 @@
   <%= render 'layouts/flash' unless flash.empty? %>
   <div id="banner" class="container">
     <div class="row-fluid">
-      <div class="col-md-3 col-md-offset-7">
+      <div class="col-md-4 col-md-offset-7">
         <div class="row-fluid">
           <div class="box well">
             <div id="box-top">
               <span id="sign-up">Sign Up</span>
             </div>
             <%= form_tag '/users', remote: true, id: 'email-form' do %>
-              <%= label_tag 'email', 'Email' %>
               <%= email_field_tag 'email', nil, placeholder: 'hungry@gmail.com', tabindex: 100 %>
               <%= submit_tag 'Submit' %>
             <% end %>
