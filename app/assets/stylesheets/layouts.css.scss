@@ -102,10 +102,12 @@ nav {
 
   @media (max-width: 979px) {
     height: 300px;
+    @include background(image-url('dinner.jpg'));
   }
 
   @media (max-width: 767px) {
     height: 450px;
+    @include background(image-url('dinner.jpg'));
   }
 
   .row {
