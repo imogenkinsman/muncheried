@@ -67,7 +67,6 @@ header {
 }
 
 nav {
-
   padding-left: 35px;
 
   a {
@@ -90,7 +89,7 @@ nav {
   }
 }
 
-#pasta-banner {
+#banner {
   height: 270px;
   width: 100%;
   @include background(image-url('pasta.png'));
@@ -109,24 +108,21 @@ nav {
     height: 450px;
   }
 
+  .row {
+    margin-top: 50px;
+  }
 }
 
 .box {
-  position: absolute;
-  right: 25%;
-  top: 40px;
-  width: 305px;
+  width: 100%;
   height: 120px;
+  margin-top: 50px;
   background-color: rgba(0,0,0,0.65);
+  text-align: center;
 
   form {
-    padding-top: 15px;
-    display: inline-block;
-  }
-
-  #box-top {
-    margin: 0 auto;
-    width: 135px;
+    padding-top: 5px;
+    display: block;
   }
 
   #sign-up {
@@ -145,14 +141,15 @@ nav {
 /* main content */
 
 #main {
-  margin-top: 30px;
+  margin: 30px auto -45px;
+  padding-bottom: 70px;
   text-align: center;
+  min-height: 100%;
 
   h2 {
     text-align: center;
     font-size: 40px;
   }
-
 }
 
 #main-content {
@@ -166,6 +163,7 @@ nav {
 /* footer */
 
 footer {
+  height: 45px;
   position: absolute;
   bottom: 0;
   width: 100%;
