@@ -22,7 +22,7 @@ namespace :scrape do
       scrape(json, type)
     end
 
-    if Meal.all.size > current_meals
+    if Meal.all.size > current_meals && !Meal.available.where(category: 'Entree').empty?
       User.get_recipients.each do |user|
         MealMailer.alert_email(user).deliver
       end
