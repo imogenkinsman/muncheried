@@ -11,8 +11,12 @@ class Meal < ActiveRecord::Base
   alias_attribute :to_s, :name
 
   # returns all meals still available to order
-  def self.available
-    self.where('created_at > ? AND (remaining IS NULL OR remaining > 0)', 10.hours.ago)
+  def self.available(opts = {})
+    if opts.include?(:category)
+      self.where('created_at > ? AND (remaining IS NULL OR remaining > 0) AND category = ?', 10.hours.ago, opts[:category])
+    else
+      self.where('created_at > ? AND (remaining IS NULL OR remaining > 0)', 10.hours.ago)
+    end
   end
 
 end

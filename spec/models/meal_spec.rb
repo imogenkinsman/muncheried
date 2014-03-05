@@ -45,6 +45,12 @@ describe Meal do
       expect(Meal.available.map(&:name)).to eq ['Chicken', 'Beef']
     end
 
+    it 'returns currently available meals of a type' do
+      create(:meal, name: 'Chicken')
+      create(:meal, name: 'Pasta', category: 'Side')
+      expect(Meal.available(category: 'Entree').map(&:name)).to eq ['Chicken']
+    end
+
   end
 
 end
