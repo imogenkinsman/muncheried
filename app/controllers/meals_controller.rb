@@ -1,5 +1,5 @@
 class MealsController < ApplicationController
   def index
-    @meals = Meal.available
+    @meal_categories = Meal.available.group_by(&:category)
   end
 end
