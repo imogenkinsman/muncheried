@@ -13,9 +13,9 @@ class Meal < ActiveRecord::Base
   # returns all meals still available to order
   def self.available(opts = {})
     if opts.include?(:category)
-      self.where('created_at > ? AND (remaining IS NULL OR remaining > 0) AND category = ?', 10.hours.ago, opts[:category])
+      self.where('updated_at > ? AND (remaining IS NULL OR remaining > 0) AND category = ?', 10.hours.ago, opts[:category])
     else
-      self.where('created_at > ? AND (remaining IS NULL OR remaining > 0)', 10.hours.ago)
+      self.where('updated_at > ? AND (remaining IS NULL OR remaining > 0)', 10.hours.ago)
     end
   end
 
