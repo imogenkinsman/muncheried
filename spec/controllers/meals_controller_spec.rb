@@ -1,9 +1,9 @@
 describe MealsController do
   describe 'GET #index' do
-    it 'populates an array of meals' do
+    it 'populates an grouped hash of Meals' do
       meals = create_list(:meal, 3)
       get :index
-      expect(assigns(:meals)).to eq(meals)
+      expect(assigns(:meal_categories)['Entree'].size).to eq(3)
     end
 
     it 'renders the :index view' do
