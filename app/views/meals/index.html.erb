@@ -1,18 +1,16 @@
 <h2>Today's Flash Sales</h2>
 
 <div id="meals">
-  <div id="meals-inner">
-    <% if @meal_categories.empty? %>
-      <p>None Yet!</p>
-    <% else %>
-      <% @meal_categories.each do |category| %>
-        <%= content_tag(:h3, category[0]) %>
-        <ul>
-          <% category[1].each do |meal| %>
-            <li><%= link_to meal, meal.url, target: '_blank' %> - $<%= meal.price %></li>
-          <% end %>
-        </ul>
-      <% end %>
+  <% if @meal_categories.empty? %>
+    <p>None Yet!</p>
+  <% else %>
+    <% @meal_categories.each do |category| %>
+      <%= content_tag(:h3, category[0]) %>
+      <ul>
+        <% category[1].each do |meal| %>
+          <li><%= link_to meal, meal.url, target: '_blank' %> - $<%= meal.price %></li>
+        <% end %>
+      </ul>
     <% end %>
-  </div>
+  <% end %>
 </div>
