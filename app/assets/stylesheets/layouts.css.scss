@@ -1,6 +1,7 @@
-@import 'libraries/colors';
+@import 'libraries/variables';
 @import 'compass/css3';
 @import 'bootstrap';
+@import 'libraries/mixins';
 
 /* flash messages */
 
@@ -92,12 +93,12 @@ nav {
   border-top: 1px solid $grey;
   border-bottom: 1px solid $grey;
 
-  @media (max-width: 979px) {
+  @include media($tablet) {
     height: 250px;
     @include background(image-url('dinner.jpg'));
   }
 
-  @media (max-width: 767px) {
+  @include media($mobile) {
     height: 200px;
     @include background(image-url('dinner.jpg'));
   }

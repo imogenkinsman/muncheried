@@ -1,11 +1,13 @@
-@import 'libraries/colors';
+@import 'libraries/variables';
 @import 'compass/css3';
+@import 'libraries/mixins';
 
 /* sales */
 
 #meals {
   margin: 40px auto 0;
   text-align: center;
+  min-width: 500px;
 
   ul {
     list-style: none;
@@ -16,8 +18,8 @@
     font-size: 24px;
   }
 
-  @media (min-width: 767px) {
-    min-width: 500px;
+  @include media($mobile) {
+    min-width: 0;
   }
 
 }

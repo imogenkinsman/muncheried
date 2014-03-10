@@ -1,0 +1,6 @@
+// Wrap content in a media query
+@mixin media($querystring) {
+  @media #{$querystring} {
+    @content;
+  }
+}

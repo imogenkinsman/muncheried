@@ -1,3 +1,5 @@
+/* colors */
+
 $white: #ffffff;
 $lightgrey: #F3F3F3;
 $grey: #E3E3E3;
@@ -14,3 +16,9 @@ $midnightblue: #003366;
 $yellowgreen: #adff2f;
 
 $americanrose: #DC143C;
+
+/* media queries */
+
+$mobile: "(max-width: 767px)";
+$tablet: "(min-width: 768px) and (max-width: 1023px)";
+$desktop: "(min-width: 1024px)";
