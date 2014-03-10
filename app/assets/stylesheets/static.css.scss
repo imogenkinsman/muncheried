@@ -3,16 +3,12 @@
 
 /* about, faq */
 
-div[id*='content-'] {
+[id*='content-'] {
   margin: 30px auto 0;
 
-  p {
+  p, dt, dd {
     text-align: left;
     padding: 10px 0;
-  }
-
-  strong {
-    font-weight: 600;
   }
 
   @media (min-width: 979px) {
