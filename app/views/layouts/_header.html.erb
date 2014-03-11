@@ -11,7 +11,7 @@
         <div class="box well">
           <span id="sign-up">Sign Up</span>
           <%= form_tag '/users', remote: true, id: 'email-form' do %>
-            <%= email_field_tag 'email', nil, placeholder: 'hungry@gmail.com', tabindex: 100 %>
+            <%= email_field_tag 'email', nil, placeholder: 'hungry@gmail.com', tabindex: 100, required: true %>
             <%= submit_tag 'Submit' %>
           <% end %>
         </div>
