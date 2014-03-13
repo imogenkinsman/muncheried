@@ -8,7 +8,14 @@ class Meal < ActiveRecord::Base
   validates :price,
             presence: true, numericality: { greater_than: 0, less_than: 15 }
 
+  after_create :create_twitter_update
+
   alias_attribute :to_s, :name
+
+  def create_twitter_update
+    client = TwitterClient.new
+    client.post(self)
+  end
 
   # returns all meals still available to order
   def self.available(opts = {})
