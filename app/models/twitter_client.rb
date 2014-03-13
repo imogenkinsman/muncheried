@@ -10,7 +10,7 @@ class TwitterClient
   end
 
   def post(meal)
-    content = "SALE: #{meal} - #{meal.price} - #{meal.description[0...100]}..."
+    content = "#{meal} - #{meal.price} - #{meal.url}"
     @client.update(content)
   end
 
