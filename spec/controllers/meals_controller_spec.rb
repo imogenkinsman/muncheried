@@ -1,6 +1,8 @@
 describe MealsController do
   describe 'GET #index' do
     it 'populates an grouped hash of Meals' do
+      Meal.any_instance.stub(:create_twitter_update)
+
       meals = create_list(:meal, 3)
       get :index
       expect(assigns(:meal_categories)['Entree'].size).to eq(3)
