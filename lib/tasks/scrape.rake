@@ -13,7 +13,7 @@ namespace :scrape do
   task :run => :environment do
     # hacky heroku scheduler code here
     time = Time.now
-    scrape unless time.hour < 14 || time.hour > 18
+    scrape unless time.hour > 14 && time.hour < 18
   end
 
   def scrape
