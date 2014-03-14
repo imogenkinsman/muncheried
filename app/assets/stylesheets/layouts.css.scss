@@ -59,8 +59,12 @@ header {
   padding-bottom: 25px;
 }
 
+#top-panel {
+  position: relative;
+}
+
 nav {
-  padding-left: 35px;
+  display: inline-block;
 
   a {
     font-weight: 600;
@@ -80,6 +84,15 @@ nav {
   strong {
     color: $softblue;
   }
+}
+
+.twitter-follow-button {
+  position: absolute;
+  right: 0;
+  top: 15px;
+  font-size: 16px;
+  color: $white;
+  display: inline-block;
 }
 
 #banner {

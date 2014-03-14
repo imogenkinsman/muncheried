@@ -1,13 +1,16 @@
 <header>
-  <nav role="navigation">
-    <%= link_to root_url do %>
-      Munch<strong>Alerts</strong>
-    <% end %>
-  </nav>
+  <div class="container" id="top-panel">
+    <nav role="navigation">
+      <%= link_to root_url do %>
+        Munch<strong>Alerts</strong>
+      <% end %>
+    </nav>
+    <a href="https://twitter.com/munchalerts" class="twitter-follow-button" data-size="large" data-show-count="false" data-lang="en">Follow @munchalerts</a>
+  </div>
   <%= render 'layouts/flash' unless flash.empty? %>
   <div id="banner" class="container">
     <div class="row-fluid">
-      <div class="col-md-4 col-md-offset-6">
+      <div class="col-md-4 col-md-offset-5">
         <div class="box well">
           <span id="sign-up">Sign Up</span>
           <%= form_tag '/users', remote: true, id: 'email-form' do %>
