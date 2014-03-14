@@ -11,7 +11,12 @@ namespace :scrape do
 
   desc "scrapes new content from Munchery"
   task :run => :environment do
+    # hacky heroku scheduler code here
+    time = Time.now
+    scrape unless time.hour < 14 || time.hour > 18
+  end
 
+  def scrape
     doc = Nokogiri::HTML(open("https://munchery.com/menus/#/0"))
     content = doc.at_xpath("//script[@class='menu-page-data']")
     json = JSON.parse(content.inner_html.strip)
@@ -19,7 +24,7 @@ namespace :scrape do
     current_meals = Meal.all.size
 
     %w(Entree Side Drink).each do |type|
-      scrape(json, type)
+      parse_content(json, type)
     end
 
     if Meal.all.size > current_meals && !Meal.available(category: 'Entree').empty?
@@ -29,7 +34,7 @@ namespace :scrape do
     end
   end
 
-  def scrape(json, category)
+  def parse_content(json, category)
     items = json['menu']['sections'].find { |section| section["name"] == category.pluralize }["items"]
     flash_items = items.select { |entree| entree["price_mod"] == "Flash Sale" }
 
