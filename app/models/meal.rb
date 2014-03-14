@@ -14,7 +14,7 @@ class Meal < ActiveRecord::Base
 
   def create_twitter_update
     client = TwitterClient.new
-    client.post(self)
+    client.post(self) unless self.remaining == 0
   end
 
   # returns all meals still available to order
