@@ -38,7 +38,7 @@ describe Meal do
   describe '#available' do
 
     before(:each) do
-      Meal.any_instance.stub(:create_twitter_update)
+      Meal.any_instance.stub(:update_twitter)
     end
 
     it 'returns the currently available meals' do
