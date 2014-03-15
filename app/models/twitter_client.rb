@@ -9,6 +9,9 @@ class TwitterClient
     end
   end
 
+  # Creates a new Twitter update for a meal.
+  #
+  # @param [Meal] meal the meal to make an update about
   def post(meal)
     content = "#{meal} - #{meal.price} - #{meal.url}"
     @client.update(content)
