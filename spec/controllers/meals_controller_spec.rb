@@ -1,7 +1,7 @@
 describe MealsController do
   describe 'GET #index' do
     it 'populates an grouped hash of Meals' do
-      Meal.any_instance.stub(:create_twitter_update)
+      Meal.any_instance.stub(:update_twitter)
 
       meals = create_list(:meal, 3)
       get :index
