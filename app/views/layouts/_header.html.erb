@@ -1,11 +1,10 @@
 <header>
-  <div class="container" id="top-panel">
+  <div class="container rel">
     <nav role="navigation">
       <%= link_to root_url do %>
         Munch<strong>Alerts</strong>
       <% end %>
     </nav>
-    <a href="https://twitter.com/munchalerts" class="twitter-follow-button" data-size="large" data-show-count="false" data-lang="en">Follow @munchalerts</a>
   </div>
   <%= render 'layouts/flash' unless flash.empty? %>
   <div id="banner" class="container">

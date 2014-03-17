@@ -5,7 +5,7 @@
   <meta name="description" content="Check current Munchery flash sales and be notified of new ones by email!">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta charset="utf-8">
-  <%= stylesheet_link_tag    "application", "http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600" %>
+  <%= stylesheet_link_tag "application", "//fonts.googleapis.com/css?family=Source+Sans+Pro:400,600" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
   <!-- [if lt IE 9]>
@@ -13,15 +13,15 @@
   <![endif]-->
 </head>
 <body>
-<div id="container">
-  <%= render "layouts/header" %>
+  <div id="wrap">
+    <%= render "layouts/header" %>
 
-  <div id="main" role="main">
-    <div id="main-content">
-      <%= yield %>
+    <div id="main" role="main">
+      <div id="main-content">
+        <%= yield %>
+      </div>
     </div>
   </div>
   <%= render "layouts/footer" %>
-</div>
 </body>
 </html>
