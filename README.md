@@ -2,5 +2,3 @@ MunchAlerts [![Build Status](https://travis-ci.org/zetsubo/muncheried.png?branch
 ==========
 
 Alerts for flash sales on [Munchery.com](http://www.munchery.com).
-
-Currently lives [here](http://munchalerts.herokuapp.com/).
