@@ -18,10 +18,11 @@ describe Meal do
   end
 
   it 'is invalid if not a specific category' do
-    expect(build(:meal, category: 'Alcohol')).not_to be_valid
     expect(build(:meal, category: 'Entree')).to be_valid
     expect(build(:meal, category: 'Side')).to be_valid
     expect(build(:meal, category: 'Drink')).to be_valid
+
+    expect(build(:meal, category: 'Alcohol')).to have(1).errors_on(:category)
   end
 
   it 'is invalid without a price' do
@@ -29,10 +30,11 @@ describe Meal do
   end
 
   it 'is invalid if price is negative or greater than 15' do
-    expect(build(:meal, price: 15.23)).not_to be_valid
-    expect(build(:meal, price: -1)).not_to be_valid
-    expect(build(:meal, price: 0)).not_to be_valid
     expect(build(:meal, price: 14)).to be_valid
+
+    expect(build(:meal, price: 15.23)).to have(1).errors_on(:price)
+    expect(build(:meal, price: -1)).to have(1).errors_on(:price)
+    expect(build(:meal, price: 0)).to have(1).errors_on(:price)
   end
 
   describe '#available' do
