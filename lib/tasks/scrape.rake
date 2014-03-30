@@ -40,7 +40,6 @@ namespace :scrape do
 
     flash_items.each do |item|
       meal = Meal.find_or_initialize_by(name: item['name'])
-      new_records = true if meal.new_record?
       price = BigDecimal('%d.%.2d' % [item['price']['dollars'], item['price']['cents']])
       meal.update(name: item['name'], description: item['description'], category: category,
                   url: ("https://munchery.com/menus/#/0/#{item['url']}/info"), price: price,
