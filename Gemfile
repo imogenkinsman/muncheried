@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-ruby '2.1.0'
+ruby '2.1.1'
 
 gem 'rails', '4.0.3'
 
@@ -13,7 +13,6 @@ gem 'uglifier', '>= 1.3.0'
 gem 'mandrill-api', '~> 1.0.49'
 gem 'nokogiri', '~> 1.6.1'
 gem 'jquery-rails'
-gem 'rufus-scheduler'
 gem 'twitter', '~> 5.8.0'
 
 group :test do
